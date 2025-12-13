@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarGarden - Live Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="demo_style.css">
+</head>
+<body>
+
+    <nav class="navbar dashboard-nav">
+        <div class="logo">
+            <a href="index.html" style="text-decoration:none;">
+                <span class="logo-white">CAR</span><span class="logo-green">GARDEN</span> <span style="font-size: 0.5em; color: var(--primary-magenta);">// SYSTEM GPS</span>
+            </a>
+        </div>
+        <div class="user-info">
+            Zalogowano jako: <span class="text-green">Admin Demo</span>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h3>Flota w Warszawie</h3>
+            <div id="car-list" class="car-list">
+                </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="car-header">
+                <div class="header-info">
+                    <h2 id="car-name">Wybierz pojazd</h2>
+                    <div class="status-badge" id="car-status-badge">---</div>
+                </div>
+                <div id="selected-car-img" style="width: 100px; height: 60px; background-size: cover; background-position: center; border-radius: 5px; display: none;"></div>
+            </header>
+
+            <div class="grid-layout">
+                
+                <div class="card map-card">
+                    <div class="card-header">Lokalizacja GPS (Warszawa Live)</div>
+                    <div class="map-container-wrapper">
+                        <div id="map-connect"></div>
+                    </div>
+                    <div class="map-overlay">
+                        <span>LAT: <span id="geo-lat">52.2297</span></span>
+                        <span>LNG: <span id="geo-lng">21.0122</span></span>
+                    </div>
+                </div>
+
+                <div class="telemetry-grid">
+                    
+                    <div class="card telemetry-card">
+                        <div class="card-header">Prędkość</div>
+                        <div class="gauge-value">
+                            <span id="speed-val">0</span> <span class="unit">km/h</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div id="speed-bar" class="progress-fill speed-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="card telemetry-card">
+                        <div class="card-header">Poziom Paliwa</div>
+                        <div class="gauge-value">
+                            <span id="fuel-val">0</span> <span class="unit">%</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div id="fuel-bar" class="progress-fill fuel-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="card telemetry-card">
+                        <div class="card-header">Przebieg</div>
+                        <div class="gauge-value small">
+                            <span id="odometer-val">00000</span> <span class="unit">km</span>
+                        </div>
+                    </div>
+
+                    <div class="card telemetry-card action-card">
+                        <div class="card-header">Zarządzanie</div>
+                        <p id="action-desc" style="font-size: 0.8rem; color:#888; margin-bottom: 10px;">Zmień status pojazdu.</p>
+                        <button id="toggle-rent-btn" class="btn-primary full-width">Wypożycz Auto</button>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <script src="demo_data.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>

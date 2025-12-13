@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarGarden - System Zarządzania Wypożyczalnią</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-white">CAR</span><span class="logo-green">GARDEN</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Strona główna</a></li>
+            <li><a href="#about">O nas</a></li>
+            <li><a href="#offer">Nasza Flota</a></li>
+            <li><a href="#demo-cta">Demo Systemu</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1>Najlepsza wypożyczalnia<br>samochodów <span class="text-green">CarGarden</span></h1>
+            <p>Nowatorski system zarządzania flotą sportową. Poczuj moc technologii i adrenaliny.</p>
+            <a href="#demo-cta" class="btn-primary">Sprawdź System!</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1920&auto=format&fit=crop" alt="Sport car background" class="hero-image">
+    </section>
+
+    <section id="about" class="section-dark">
+        <div class="container reveal">
+            <h2>O <span class="text-green">Nas</span></h2>
+            <div class="content-wrapper">
+                <div class="text-box">
+                    <p>CarGarden to nie tylko wypożyczalnia. To zaawansowany ekosystem łączący pasję do motoryzacji z najnowszą technologią zarządzania. Nasza flota jest zawsze gotowa, a proces wynajmu sprowadziliśmy do kilku kliknięć dzięki naszemu autorskiemu systemowi śledzenia pojazdów w czasie rzeczywistym.</p>
+                    <a href="#" class="btn-secondary">Więcej o nas</a>
+                </div>
+                <div class="image-box">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" alt="Biuro i Technologia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offer" class="section-black">
+        <div class="container reveal">
+            <h2>Nasza <span class="text-magenta">Flota Premium</span></h2>
+            <p class="section-subtitle">Wybierz jedną z naszych bestii sterowanych przez system CarGarden.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/porsche.jpg" alt="Porsche 911 Turbo S">
+                    </div>
+                    <h3>Porsche 911 Turbo S</h3>
+                    <p>Legenda torów wyścigowych. Czysta adrenalina, fioletowy lakier i precyzja.</p>
+                    <a href="#" class="btn-text">Zobacz szczegóły &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/urus.jpg" alt="Lamborghini Urus">
+                    </div>
+                    <h3>Lamborghini Urus</h3>
+                    <p>Pierwszy Super SUV na świecie. Dusza supersamochodu w potężnym, szarym nadwoziu.</p>
+                    <a href="#" class="btn-text">Zobacz szczegóły &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=600&auto=format&fit=crop" alt="Audi R8">
+                    </div>
+                    <h3>Audi R8 V10</h3>
+                    <p>Silnik V10 i napęd Quattro. Idealna harmonia mocy i technologii.</p>
+                    <a href="#" class="btn-text">Zobacz szczegóły &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/bmw.jpg" alt="BMW M3">
+                    </div>
+                    <h3>BMW M3 Competition</h3>
+                    <p>Matowa czerń, agresywny styl i doskonałe osiągi na drodze.</p>
+                    <a href="#" class="btn-text">Zobacz szczegóły &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/mercedes.jpg" alt="Mercedes CLS AMG">
+                    </div>
+                    <h3>Mercedes CLS 63 AMG</h3>
+                    <p>Luksusowe coupe z potężnym silnikiem V8 Biturbo. Elegancja i brutalna siła.</p>
+                    <a href="#" class="btn-text">Zobacz szczegóły &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo-cta" class="section-gradient">
+        <div class="container reveal">
+            <h2>Wypróbuj <span class="text-green">System Demo</span></h2>
+            <p>Zaloguj się do panelu demonstracyjnego, aby zobaczyć jak zarządzamy flotą w czasie rzeczywistym (GPS, Paliwo, Prędkość). Dane działają lokalnie w Twojej przeglądarce.</p>
+            <div class="demo-controls">
+                <button id="initDemoBtn" class="btn-primary">Załaduj Dane Demo</button>
+                <button id="resetDemoBtn" class="btn-outline">Resetuj Dane</button>
+                <a href="demo.html" class="btn-secondary" style="margin-left: 10px;">Przejdź do Dashboardu &rarr;</a>
+            </div>
+            <div id="demo-status" style="margin-top: 20px; color: #aaa; font-size: 0.9rem;">Status: Oczekiwanie na akcję...</div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-dark">
+        <div class="container reveal">
+            <h2>Skontaktuj <span class="text-magenta">się</span></h2>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <input type="text" placeholder="Imię" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Wiadomość" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Wyślij</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CarGarden System. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="demo_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
